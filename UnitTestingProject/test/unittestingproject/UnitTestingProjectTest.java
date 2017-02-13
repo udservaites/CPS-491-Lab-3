@@ -99,9 +99,9 @@ public class UnitTestingProjectTest {
         boolean hasIt = utp.findLowerCase("");
         assertEquals(false, hasIt);
         if (hasIt) {
-            System.out.println("Test Upper Case 6: Fail");
+            System.out.println("Test Lower Case 1: Fail");
         } else {
-            System.out.println("Test Upper Case 6: Pass");
+            System.out.println("Test Lower Case 1: Pass");
         }
 
     }
@@ -112,9 +112,9 @@ public class UnitTestingProjectTest {
         boolean hasIt = utp.findLowerCase("AAAAAAAAAAAAA");
         assertEquals(false, hasIt);
         if (hasIt) {
-            System.out.println("Test Upper Case 7: Fail");
+            System.out.println("Test Lower Case 2: Fail");
         } else {
-            System.out.println("Test Upper Case 7: Pass");
+            System.out.println("Test Lower Case 2: Pass");
         }
 
     }
@@ -125,13 +125,26 @@ public class UnitTestingProjectTest {
         boolean hasIt = utp.findLowerCase("AAAAAAaAAAAAA");
         assertEquals(true, hasIt);
         if (!hasIt) {
-            System.out.println("Test Upper Case 8: Fail");
+            System.out.println("Test Lower Case 3: Fail");
         } else {
-            System.out.println("Test Upper Case 8: Pass");
+            System.out.println("Test Lower Case 3: Pass");
         }
 
     }
 
+    
+    @Test
+    public void testLength() {
+
+        boolean hasIt = utp.goodLength("AAAAAAaAAAAAA");
+        assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Length: Fail");
+        } else {
+            System.out.println("Test Length: Pass");
+        }
+
+    }
     /**
      * Test of main method, of class UnitTestingProject.
      */
