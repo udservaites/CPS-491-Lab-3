@@ -32,8 +32,8 @@ public class UnitTestingProjectTest {
     public void testUpperCase1() {
 
         boolean hasIt = utp.findUpperCase("aaaaaaaaaaa");
-        assertEquals(true, hasIt);
-        if (!hasIt) {
+        assertEquals(false, hasIt);
+        if (hasIt) {
             System.out.println("Test Upper Case 1: Fail");
         } else {
             System.out.println("Test Upper Case 1: Pass");
@@ -45,7 +45,7 @@ public class UnitTestingProjectTest {
     public void testUpperCase2() {
 
         boolean hasIt = utp.findUpperCase("aaaaaaaaaaA");
-        // assertEquals(true, hasIt);
+        assertEquals(true, hasIt);
         if (!hasIt) {
             System.out.println("Test Upper Case 2: Fail");
         } else {
@@ -58,7 +58,7 @@ public class UnitTestingProjectTest {
     public void testUpperCase3() {
 
         boolean hasIt = utp.findUpperCase("aaaaaaaaaaAaaaaa");
-        // assertEquals(true, hasIt);
+        assertEquals(true, hasIt);
         if (!hasIt) {
             System.out.println("Test Upper Case 3: Fail");
         } else {
@@ -71,8 +71,8 @@ public class UnitTestingProjectTest {
     public void testUpperCase4() {
 
         boolean hasIt = utp.findUpperCase("");
-        // assertEquals(true, hasIt);
-        if (!hasIt) {
+        assertEquals(false, hasIt);
+        if (hasIt) {
             System.out.println("Test Upper Case 4: Fail");
         } else {
             System.out.println("Test Upper Case 4: Pass");
@@ -84,7 +84,7 @@ public class UnitTestingProjectTest {
     public void testUpperCase5() {
 
         boolean hasIt = utp.findUpperCase("AAAAAAAAAAAAA");
-        // assertEquals(true, hasIt);
+        assertEquals(true, hasIt);
         if (!hasIt) {
             System.out.println("Test Upper Case 5: Fail");
         } else {
@@ -102,7 +102,7 @@ public class UnitTestingProjectTest {
         String[] args = null;
         UnitTestingProject.main(args);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
 }
