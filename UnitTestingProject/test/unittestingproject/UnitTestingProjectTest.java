@@ -92,6 +92,45 @@ public class UnitTestingProjectTest {
         }
 
     }
+    
+    @Test
+    public void testUpperCase6() {
+
+        boolean hasIt = utp.findLowerCase("");
+        assertEquals(false, hasIt);
+        if (hasIt) {
+            System.out.println("Test Upper Case 4: Fail");
+        } else {
+            System.out.println("Test Upper Case 4: Pass");
+        }
+
+    }
+
+    @Test
+    public void testUpperCase7() {
+
+        boolean hasIt = utp.findLowerCase("AAAAAAAAAAAAA");
+        assertEquals(false, hasIt);
+        if (hasIt) {
+            System.out.println("Test Upper Case 5: Fail");
+        } else {
+            System.out.println("Test Upper Case 5: Pass");
+        }
+
+    }
+    
+    @Test
+    public void testUpperCase8() {
+
+        boolean hasIt = utp.findLowerCase("AAAAAAaAAAAAA");
+        assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Upper Case 5: Fail");
+        } else {
+            System.out.println("Test Upper Case 5: Pass");
+        }
+
+    }
 
     /**
      * Test of main method, of class UnitTestingProject.
