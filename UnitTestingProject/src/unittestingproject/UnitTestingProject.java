@@ -29,5 +29,17 @@ public class UnitTestingProject {
         }
         return false;
     }
+    
+    boolean findLowerCase(String tosearch) {
+
+        char passArray[] = tosearch.toCharArray();
+        for (int i = 0; i < tosearch.length(); i++) {
+            if (Character.isLowerCase(passArray[i])) {
+                return true;
+            }
+
+        }
+        return false;
+    }
 
 }
