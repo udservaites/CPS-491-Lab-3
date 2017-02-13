@@ -41,5 +41,9 @@ public class UnitTestingProject {
         }
         return false;
     }
+    
+    boolean goodLength(String password){
+        return password.length() >= 8;
+    }
 
 }
