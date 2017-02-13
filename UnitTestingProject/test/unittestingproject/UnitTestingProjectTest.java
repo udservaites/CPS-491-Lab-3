@@ -32,7 +32,7 @@ public class UnitTestingProjectTest {
     public void testUpperCase1() {
 
         boolean hasIt = utp.findUpperCase("aaaaaaaaaaa");
-        // assertEquals(true, hasIt);
+        assertEquals(true, hasIt);
         if (!hasIt) {
             System.out.println("Test Upper Case 1: Fail");
         } else {
