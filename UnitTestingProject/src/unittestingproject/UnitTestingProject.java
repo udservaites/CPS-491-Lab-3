@@ -17,5 +17,17 @@ public class UnitTestingProject {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    boolean findUpperCase(String password) {
+
+        char passArray[] = password.toCharArray();
+        for (int i = 0; i < password.length(); i++) {
+            if (Character.isUpperCase(passArray[i])) {
+                return true;
+            }
+
+        }
+        return false;
+    }
+
 }

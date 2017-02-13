@@ -15,16 +15,82 @@ import static org.junit.Assert.*;
  * @author Rebbecca
  */
 public class UnitTestingProjectTest {
-    
+
     public UnitTestingProjectTest() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
+
+//    @BeforeClass
+//    public static void setUpClass() {
+//    }
+//
+//    @AfterClass
+//    public static void tearDownClass() {
+//    }
+    UnitTestingProject utp = new UnitTestingProject();
+
+    @Test
+    public void testUpperCase1() {
+
+        boolean hasIt = utp.findUpperCase("aaaaaaaaaaa");
+        // assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Upper Case 1: Fail");
+        } else {
+            System.out.println("Test Upper Case 1: Pass");
+        }
+
     }
-    
-    @AfterClass
-    public static void tearDownClass() {
+
+    @Test
+    public void testUpperCase2() {
+
+        boolean hasIt = utp.findUpperCase("aaaaaaaaaaA");
+        // assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Upper Case 2: Fail");
+        } else {
+            System.out.println("Test Upper Case 2: Pass");
+        }
+
+    }
+
+    @Test
+    public void testUpperCase3() {
+
+        boolean hasIt = utp.findUpperCase("aaaaaaaaaaAaaaaa");
+        // assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Upper Case 3: Fail");
+        } else {
+            System.out.println("Test Upper Case 3: Pass");
+        }
+
+    }
+
+    @Test
+    public void testUpperCase4() {
+
+        boolean hasIt = utp.findUpperCase("");
+        // assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Upper Case 4: Fail");
+        } else {
+            System.out.println("Test Upper Case 4: Pass");
+        }
+
+    }
+
+    @Test
+    public void testUpperCase5() {
+
+        boolean hasIt = utp.findUpperCase("AAAAAAAAAAAAA");
+        // assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Upper Case 5: Fail");
+        } else {
+            System.out.println("Test Upper Case 5: Pass");
+        }
+
     }
 
     /**
@@ -38,5 +104,5 @@ public class UnitTestingProjectTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+
 }
