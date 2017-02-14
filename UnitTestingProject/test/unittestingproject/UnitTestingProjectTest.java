@@ -145,6 +145,203 @@ public class UnitTestingProjectTest {
         }
 
     }
+    
+    @Test
+    public void testLength2() {
+
+        boolean hasIt = utp.goodLength("A");
+        assertEquals(false, hasIt);
+        if (hasIt) {
+            System.out.println("Test Length: Fail");
+        } else {
+            System.out.println("Test Length: Pass");
+        }
+
+    }
+    @Test
+    public void testLength3() {
+
+        boolean hasIt = utp.goodLength("");
+        assertEquals(false, hasIt);
+        if (hasIt) {
+            System.out.println("Test Length: Fail");
+        } else {
+            System.out.println("Test Length: Pass");
+        }
+
+    }
+    
+    @Test
+    public void testLowercase() {
+
+        boolean hasIt = utp.findLowerCase("AAAAAAaAAAAAA");
+        assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+    @Test
+    public void testLowercase1() {
+
+        boolean hasIt = utp.findLowerCase("AAAAAA");
+        assertEquals(false, hasIt);
+        if (hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+    @Test
+    public void testLowercase2() {
+
+        boolean hasIt = utp.findLowerCase(" ");
+        assertEquals(false, hasIt);
+        if (hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+    @Test
+    public void testLowercase3() {
+
+        boolean hasIt = utp.findLowerCase("aaaaaaaaaaaaaaa");
+        assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+    @Test
+    public void testSpecialCharacter1() {
+
+        boolean hasIt = utp.findSpecialCharacter("aaaa)AAAAA");
+        assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+    @Test
+    public void testSpecialCharacter2() {
+
+        boolean hasIt = utp.findSpecialCharacter("aaaa)AAAAA");
+        assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+    
+     @Test
+    public void testSpecialCharacter3() {
+
+        boolean hasIt = utp.findSpecialCharacter("aaaa aaaaaAAA");
+        assertEquals(false, hasIt);
+        if (hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+     @Test
+    public void testSpecialCharacter4() {
+
+        boolean hasIt = utp.findSpecialCharacter("");
+        assertEquals(false, hasIt);
+        if (hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+     @Test
+    public void testSpecialCharacter5() {
+
+        boolean hasIt = utp.findSpecialCharacter("aaa~jjjjjj");
+        assertEquals(false, hasIt);
+        if (hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+     @Test
+    public void testSpaces1() {
+
+        boolean hasIt = utp.findSpaces("aaaa)AAAAA");
+        assertEquals(false, hasIt);
+        if (hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+    @Test
+    public void testSpaces2() {
+
+        boolean hasIt = utp.findSpaces("");
+        assertEquals(false, hasIt);
+        if (hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+    @Test
+    public void testSpaces3() {
+
+        boolean hasIt = utp.findSpaces("llll kkkk");
+        assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+    @Test
+    public void testSpaces4() {
+
+        boolean hasIt = utp.findSpaces(" kkkk kkkk kkk");
+        assertEquals(true, hasIt);
+        if (!hasIt) {
+            System.out.println("Test Lower Case 3: Fail");
+        } else {
+            System.out.println("Test Lower Case 3: Pass");
+        }
+
+    }
+    
+    
     /**
      * Test of main method, of class UnitTestingProject.
      */
@@ -156,5 +353,7 @@ public class UnitTestingProjectTest {
         // TODO review the generated test code and remove the default call to fail.
        
     }
+    
+   
 
 }
