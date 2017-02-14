@@ -22,7 +22,9 @@ public class UnitTestingProject {
         System.out.println("Please enter your password: ");
         Scanner scan = new Scanner(System.in);
         String password = scan.nextLine();
-        if (findUpperCase(password) && findLowerCase(password) && findDigits(password) && findSpecialCharacter(password) && !findSpaces(password)) {
+        if (findUpperCase(password) && findLowerCase(password) && 
+                findDigits(password) && findSpecialCharacter(password) 
+                && !findSpaces(password)) {
             System.out.println("Success!");
         } else {
             System.out.println("You fail");
@@ -73,10 +75,19 @@ public class UnitTestingProject {
 
         char passArray[] = tosearch.toCharArray();
         for (int i = 0; i < tosearch.length(); i++) {
-            if (passArray[i] == '/' || passArray[i] == '>' || passArray[i] == '<' || passArray[i] == '=' || passArray[i] == '+' || passArray[i] == '-' || passArray[i] == '_'
-                    || passArray[i] == ')' || passArray[i] == '(' || passArray[i] == '*' || passArray[i] == '&' || passArray[i] == '^' || passArray[i] == '%' || passArray[i] == '$'
-                    || passArray[i] == '$' || passArray[i] == '#' || passArray[i] == '@' || passArray[i] == '!' || passArray[i] == ':' || passArray[i] == ';' || passArray[i] == '['
-                    || passArray[i] == ']' || passArray[i] == '}' || passArray[i] == '{' || passArray[i] == '?') {
+            if (passArray[i] == '/' || passArray[i] == '>' || 
+                    passArray[i] == '<' || passArray[i] == '=' || 
+                    passArray[i] == '+' || passArray[i] == '-' || 
+                    passArray[i] == '_' || passArray[i] == ')' || 
+                    passArray[i] == '(' || passArray[i] == '*' || 
+                    passArray[i] == '&' || passArray[i] == '^' || 
+                    passArray[i] == '%' || passArray[i] == '$'
+                    || passArray[i] == '$' || passArray[i] == '#' || 
+                    passArray[i] == '@' || passArray[i] == '!' || 
+                    passArray[i] == ':' || passArray[i] == ';' || 
+                    passArray[i] == '[' || passArray[i] == ']' || 
+                    passArray[i] == '}' || passArray[i] == '{' || 
+                    passArray[i] == '?') {
                 return true;
             }
 
